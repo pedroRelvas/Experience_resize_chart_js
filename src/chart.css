@@ -1,0 +1,50 @@
+/* The following examples do not work:
+
+<canvas height="40vh" width="80vw">: 
+invalid values, the canvas doesn't resize 
+<canvas style="height:40vh; width:80vw">: 
+invalid behavior, the canvas is resized but becomes blurry (example) */
+
+.chart-container {
+  position: relative;
+  margin: 0 auto;
+}
+.chart-container1 {
+  position: relative;
+  margin: 0px auto;
+  width: 68%;
+}
+
+@media screen and (max-width: 800px) {
+  .chart-container1 {
+    position: relative;
+    margin: 0px auto;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  .chart-container1 {
+    position: relative;
+    margin: 0px auto;
+    width: 70%;
+  }
+}
+
+.chart-container .chart {
+  /* FICA DEFORMADO */
+  /*  width: 600px !important;
+  height: 200px !important; */
+
+  width: 600px !important;
+  height: 300px !important;
+}
+
+.chart-container1 .chart1 {
+  /* FICA DEFORMADO */
+  /*  width: 600px !important;
+  height: 200px !important; */
+  margin: 0 auto;
+  width: 100% !important;
+  height: 100% !important;
+}
